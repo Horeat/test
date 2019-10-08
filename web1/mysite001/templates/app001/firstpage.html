@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+
+    <title>登录页面</title>
+</head>
+<body>
+<form method="post" action="/login_action/">                          <!--创造一个表单，用于数据提交，并且使用post方式提交表单,同时定义为login_action（登陆）过程-->
+    <input  name="username" type="text" placeholder="用户名"><br>　　　　 <!--input标签定义文本框，数据类型-->
+    <input  name="password" type="password" placeholder="密码"><br>
+    {{error}}<br>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<!--这里的双大括号可以用于显示函数所指定的内容-->
+    <button id="btn" type="submit">登录</button>
+    {% csrf_token %}　　　　　　　　                                             <!--为了防止csrf攻击-->
+
+
+</form>
+</body>
+</html>

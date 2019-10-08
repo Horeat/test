@@ -1,0 +1,20 @@
+<!--
+<h1>确定打开吗？</h1> 
+<form action="/app001/test1/" method="get"> 
+  <button name="subject" type="submit" value="Submit">确定</button>
+</form>
+-->
+
+<!-- 
+<form action="/app001/test1/" method="get">
+  <p>姓名：<input type="text" name="name1"></p>
+  <input type="submit" value="确定">
+</form>
+-->
+
+<form action="/app001" method="post">
+ {% csrf_token %}<!-- 出于网站安全性考虑，跨站点伪造请求保护 -->
+  <p>姓名：<input type="text" name="name1"></p>
+  <input type="submit" value="确定">
+</form>
+<p>{{head}}<p>
